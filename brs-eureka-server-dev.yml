@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: brs-eureka-server
+
+server:
+  port: 8070
+  servlet:
+    context-path: /brs
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

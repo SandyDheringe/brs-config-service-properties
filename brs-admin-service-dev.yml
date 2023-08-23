@@ -1,12 +1,18 @@
-service:
-  name: brs-admin-service
 
 spring:
+  application:
+    name: brs-admin-service
+
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
     url: jdbc:mysql://localhost:3306/bus_reservation_db
+    username: root
     password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    hibernate:
-      ddl-auto: update
+      hibernate:
+        ddl-auto: none
+      show-sql: true      # Print SQL queries to console for debugging
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+
