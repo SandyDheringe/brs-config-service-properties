@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: brs-booking-service
+    name: brs-inventory-service
 
   datasource:
     url: jdbc:mysql://localhost:3306/bus_reservation_db
@@ -20,4 +20,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:8070/eureka
 server:
-  port: 8083
+  port: 8082
