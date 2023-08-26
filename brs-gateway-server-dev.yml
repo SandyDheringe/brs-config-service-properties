@@ -7,7 +7,39 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-          
+      
+      routes:
+        - id: brs-auth-service
+          uri: lb://BRS-AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+
+        - id: brs-booking-service
+          uri: lb://BRS-BOOKING-SERVICE
+          predicates:
+            - Path=/booking/**
+          filters:
+            - AuthenticationFilter
+
+        - id: brs-payment-service
+          uri: lb://BRS-PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/**
+          filters:
+            - AuthenticationFilter
+
+        - id: brs-inventory-service
+          uri: lb://BRS-INVENTORY-SERVICE
+          predicates:
+            - Path=/inventory/**
+          filters:
+            - AuthenticationFilter
+
+        - id: brs-admin-service
+          uri: lb://BRS-ADMIN-SERVICE
+          predicates:
+            - Path=/admin/**
+
 eureka:
   client:
     service-url:
