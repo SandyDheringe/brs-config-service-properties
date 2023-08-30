@@ -13,3 +13,10 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   instance:
     hostname: localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true

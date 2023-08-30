@@ -29,3 +29,10 @@ server:
   servlet:
     context-path: /inventory
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+
