@@ -29,6 +29,12 @@ server:
   servlet:
     context-path: /booking
 
+
+endpoint:
+  inventory:
+    host: http://BRS-INVENTORY-SERVICE/inventory
+    getInventories: /api/v1/buses/{bus_id}/inventories
+    
 management:
   health:
     circuitbreakers:
@@ -40,7 +46,6 @@ management:
   endpoint:
     health:
       show-details: always
-
 
 resilience4j:
   circuitbreaker:
