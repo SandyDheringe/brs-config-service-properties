@@ -61,9 +61,3 @@ resilience4j:
         slidingWindowSize: 10
         slidingWindowType: COUNT_BASED
 
-
-  retry:
-    instances:
-      inventoryService:
-        maxRetryAttempts: 2
-        waitDuration: 3s
