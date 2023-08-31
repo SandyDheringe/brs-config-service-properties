@@ -3,10 +3,10 @@ spring:
   application:
     name: brs-booking-service
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://zipkin-server:9411
     
   datasource:
-    url: jdbc:mysql://localhost:3306/bus_reservation_db
+    url: jdbc:mysql://host.docker.internal:3306/bus_reservation_db
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,7 +18,7 @@ spring:
         hibernate:
           dialect: org.hibernate.dialect.MySQL8Dialect
   activemq:
-    broker-url: tcp://localhost:61616
+    broker-url: tcp://activemq:61616
     
 eureka:
   client:
